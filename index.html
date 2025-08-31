@@ -3,19 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dmarkagency - Digital Marketing Excellence</title>
+    <title>Dmark Agency - Digital Marketing Experts</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary: #4e54c8;
-            --secondary: #8f94fb;
-            --accent: #ff6b6b;
-            --dark: #2c3e50;
-            --light: #f8f9fa;
-            --success: #4ecca3;
-            --text: #333;
-            --shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            --primary: #2563eb;
+            --primary-dark: #1d4ed8;
+            --secondary: #10b981;
+            --dark: #1f2937;
+            --light: #f9fafb;
+            --accent: #f59e0b;
+            --text: #374151;
+            --text-light: #6b7280;
+            --shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
             --gradient: linear-gradient(135deg, var(--primary), var(--secondary));
         }
 
@@ -36,6 +37,7 @@
         h1, h2, h3, h4, h5 {
             font-family: 'Montserrat', sans-serif;
             font-weight: 700;
+            color: var(--dark);
         }
 
         .container {
@@ -47,8 +49,8 @@
 
         /* Header & Navigation */
         header {
-            background: rgba(44, 46, 80, 0.95);
-            color: white;
+            background: rgba(255, 255, 255, 0.95);
+            color: var(--dark);
             padding: 20px 0;
             position: fixed;
             width: 100%;
@@ -67,13 +69,13 @@
         .logo {
             font-size: 28px;
             font-weight: 700;
-            color: var(--success);
+            color: var(--primary);
             display: flex;
             align-items: center;
         }
 
-        .logo i {
-            margin-right: 10px;
+        .logo span {
+            color: var(--secondary);
         }
 
         .nav-links {
@@ -86,7 +88,7 @@
         }
 
         .nav-links a {
-            color: white;
+            color: var(--dark);
             text-decoration: none;
             font-weight: 500;
             transition: color 0.3s;
@@ -100,7 +102,7 @@
             height: 2px;
             bottom: -5px;
             left: 0;
-            background-color: var(--success);
+            background-color: var(--primary);
             transition: width 0.3s;
         }
 
@@ -109,7 +111,7 @@
         }
 
         .nav-links a:hover {
-            color: var(--success);
+            color: var(--primary);
         }
 
         .hamburger {
@@ -121,7 +123,7 @@
         /* Hero Section */
         .hero {
             padding: 180px 0 100px;
-            background: var(--gradient), url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80') no-repeat center center/cover;
+            background: linear-gradient(rgba(37, 99, 235, 0.9), rgba(16, 185, 129, 0.8)), url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80') no-repeat center center/cover;
             color: white;
             text-align: center;
             position: relative;
@@ -139,12 +141,14 @@
             font-size: 3.5rem;
             margin-bottom: 20px;
             animation: fadeInUp 1s ease;
+            color: white;
         }
 
         .hero p {
             font-size: 1.3rem;
             margin: 0 auto 30px;
             animation: fadeInUp 1.5s ease;
+            color: rgba(255, 255, 255, 0.9);
         }
 
         .cta-buttons {
@@ -174,13 +178,13 @@
         }
 
         .btn-primary {
-            background: var(--success);
+            background: var(--accent);
             color: white;
-            box-shadow: 0 4px 15px rgba(78, 204, 163, 0.3);
+            box-shadow: 0 4px 15px rgba(245, 158, 11, 0.3);
         }
 
         .btn-primary:hover {
-            background: #3da58a;
+            background: #e69008;
             transform: translateY(-3px);
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
         }
@@ -259,7 +263,7 @@
             position: absolute;
             width: 70px;
             height: 4px;
-            background: var(--success);
+            background: var(--primary);
             bottom: -10px;
             left: 50%;
             transform: translateX(-50%);
@@ -267,7 +271,7 @@
 
         .section-title p {
             font-size: 1.2rem;
-            color: #666;
+            color: var(--text-light);
             max-width: 600px;
             margin: 0 auto;
         }
@@ -326,7 +330,7 @@
         }
 
         .service-card p {
-            color: #666;
+            color: var(--text-light);
         }
 
         /* Portfolio Section */
@@ -366,7 +370,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(78, 84, 200, 0.9);
+            background: rgba(37, 99, 235, 0.9);
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -468,7 +472,7 @@
             top: 20px;
             left: 20px;
             font-size: 60px;
-            color: rgba(78, 84, 200, 0.1);
+            color: rgba(37, 99, 235, 0.1);
             font-family: serif;
         }
 
@@ -720,7 +724,7 @@
             text-transform: uppercase;
             letter-spacing: 1px;
             transition: all 0.3s;
-            box-shadow: 0 4px 15px rgba(78, 84, 200, 0.3);
+            box-shadow: 0 4px 15px rgba(37, 99, 235, 0.3);
             width: 100%;
         }
 
@@ -746,7 +750,7 @@
         .footer-logo {
             font-size: 2.5rem;
             font-weight: 700;
-            color: var(--success);
+            color: var(--secondary);
             margin-bottom: 20px;
         }
 
@@ -766,7 +770,7 @@
         }
 
         .footer-links a:hover {
-            color: var(--success);
+            color: var(--secondary);
         }
 
         .copyright {
@@ -841,7 +845,7 @@
     <header>
         <div class="container">
             <nav>
-                <div class="logo"><i class="fas fa-rocket"></i>Dmarkagency</div>
+                <div class="logo">Dmark<span>Agency</span></div>
                 <ul class="nav-links">
                     <li><a href="#home">Home</a></li>
                     <li><a href="#services">Services</a></li>
@@ -864,7 +868,7 @@
         <div class="container">
             <div class="hero-content">
                 <h1>Elevate Your Digital Presence</h1>
-                <p>Dmarkagency is a full-service digital marketing agency specializing in e-commerce, web development, email marketing, and SEO solutions.</p>
+                <p>We're a full-service digital marketing agency specializing in e-commerce, web development, email marketing, and SEO solutions.</p>
                 <div class="cta-buttons">
                     <a href="https://wa.me/19123101730" class="btn btn-primary"><i class="fab fa-whatsapp"></i> Chat on WhatsApp</a>
                     <a href="https://www.tiktok.com/@dmark_agency" class="btn btn-secondary"><i class="fab fa-tiktok"></i> Follow on TikTok</a>
@@ -1048,7 +1052,7 @@
             </div>
             <div class="reviews-grid">
                 <div class="review-card">
-                    <p class="review-text">"Dmarkagency transformed our online store. Our sales increased by 220% in just 3 months. Their expertise in e-commerce is unmatched!"</p>
+                    <p class="review-text">"Dmark Agency transformed our online store. Our sales increased by 220% in just 3 months. Their expertise in e-commerce is unmatched!"</p>
                     <div class="reviewer">
                         <img src="https://randomuser.me/api/portraits/women/43.jpg" alt="Sarah Johnson">
                         <div class="reviewer-info">
@@ -1064,7 +1068,7 @@
                     </div>
                 </div>
                 <div class="review-card">
-                    <p class="review-text">"The SEO work done by Dmarkagency got our website on the first page of Google for all our target keywords. Highly recommended!"</p>
+                    <p class="review-text">"The SEO work done by Dmark Agency got our website on the first page of Google for all our target keywords. Highly recommended!"</p>
                     <div class="reviewer">
                         <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Michael Chen">
                         <div class="reviewer-info">
@@ -1201,7 +1205,7 @@
                         </div>
                         <div class="contact-text">
                             <h3>Email</h3>
-                            <p>dmarkagency60@gmail.com</p>
+                            <p>dmarkagencyinfo@gmail.com</p>
                         </div>
                     </div>
                     <div class="contact-item">
@@ -1246,7 +1250,7 @@
     <footer>
         <div class="container">
             <div class="footer-content">
-                <div class="footer-logo">Dmarkagency</div>
+                <div class="footer-logo">Dmark<span>Agency</span></div>
                 <p>Your partner for digital success</p>
                 <ul class="footer-links">
                     <li><a href="#home">Home</a></li>
@@ -1259,7 +1263,7 @@
                     <li><a href="#contact">Contact</a></li>
                 </ul>
                 <div class="copyright">
-                    <p>&copy; 2023 Dmarkagency. All rights reserved.</p>
+                    <p>&copy; 2023 Dmark Agency. All rights reserved.</p>
                 </div>
             </div>
         </div>
@@ -1291,11 +1295,11 @@
             console.log('Message:', message);
             
             // This is where you would integrate with an email service or backend
-            // to send notifications to dmarkagency60@gmail.com
+            // to send notifications to dmarkagencyinfo@gmail.com
         });
 
         // Simple page visit notification (would need backend in real implementation)
-        console.log('Website visited - notification should be sent to dmarkagency60@gmail.com');
+        console.log('Website visited - notification should be sent to dmarkagencyinfo@gmail.com');
         
         // Hamburger menu functionality
         const hamburger = document.querySelector('.hamburger');
