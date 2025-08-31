@@ -302,6 +302,7 @@
             height: 100%;
             background: var(--gradient);
             transition: width 0.3s;
+            z-index: 1;
         }
 
         .service-card:hover:before {
@@ -321,16 +322,22 @@
             background: var(--gradient);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+            position: relative;
+            z-index: 2;
         }
 
         .service-card h3 {
             font-size: 1.5rem;
             margin-bottom: 15px;
             color: var(--dark);
+            position: relative;
+            z-index: 2;
         }
 
         .service-card p {
             color: var(--text-light);
+            position: relative;
+            z-index: 2;
         }
 
         /* Portfolio Section */
@@ -797,6 +804,22 @@
         @media (max-width: 992px) {
             .nav-links {
                 display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: white;
+                padding: 20px;
+                box-shadow: var(--shadow);
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .nav-links li {
+                margin: 10px 0;
             }
 
             .hamburger {
@@ -1306,7 +1329,7 @@
         const navLinks = document.querySelector('.nav-links');
         
         hamburger.addEventListener('click', () => {
-            navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
+            navLinks.classList.toggle('active');
         });
 
         // Add animation on scroll
